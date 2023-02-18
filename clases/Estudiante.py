@@ -19,7 +19,7 @@ def GuardarEstudiante(self):
 def ActualizarEstudiante(self):
     client, db = MongoDB.getDB()
     collection = db[self.__collection]
-    collection.insert_one(self.__dict__)
+    collection.uodate_one(self.__dict__)
     client.close()
     
     
