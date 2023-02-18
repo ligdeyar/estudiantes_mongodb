@@ -23,7 +23,6 @@ def ActualizarEstudiante(self):
     # en comparacion con los nombres porque puede haber varios con el mismo  
     base = {"numCuenta": self.numCuenta}
     campos = {"$set": {"numCuenta": numCuenta, "nombre": nombre, "apellido": apellido, "correoEstudiantil": correoEstudiantil}}
-
     collection.update_one(base,campos)
     client.close()
     
